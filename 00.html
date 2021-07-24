@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                margin: 0;
+            }
+            /* 전체페이지 영역 */
+            .wrap_page {
+                background-color: aqua;
+                min-height: 100vh;
+            }
+            /* 헤더영역 */
+            .wrap_header{
+        
+                padding: 13px;
+                background-color: bisque;
+                /* float 요소들의 높이값을 잡을 수 있게 도와준다 */
+                overflow: hidden;
+                border-bottom: 1px solid #000;
+            }
+                
+        
+            .wrap_header .logo {
+                width: 128px;
+                float: left;
+            }
+            .wrap_header .wrap_header_menu {
+                padding: 0;
+                margin: 0;
+                float: right;
+            }
+            .wrap_header .wrap_header_menu .menu {
+                list-style: none;
+                display: inline-block;
+        
+            }
+            .wrap_header .wrap_header_menu .menu:not(:last-child){
+                margin-right: 14px;
+            }
+    
+        </style>
+    </head>
+    <body>
+        <!-- 전체를 감싸는 컨테이너 -->
+        <div class="wrap_page">
+            <!-- 헤더 영역 -->
+            <div class="wrap_header">
+                
+                <img class="logo" src="https://www.balenciaga.com/on/demandware.static/-/Sites/default/dw17de0943/images/logo/BAL/logo-small.svg" alt="Balenciaga - Go to the Homepage">
+                <ul class="wrap_header_menu">
+                    <li class="menu">장바구니</li>
+                    <li class="menu">검색</li>
+                    <li class="menu">메뉴</li>
+                </ul>
+            </div>
+            
+            <!-- 배너 영역 -->
+            <div></div>
+            <!-- 메뉴 영역 -->
+            <div></div>
+        </div>
+    </body>
+</html>
