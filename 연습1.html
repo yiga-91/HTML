@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습1</title>
+    <link href="./reset.css" rel="stylesheet"/>
+    <style>
+    
+        /* 전체단락영역 */
+        .all_page{
+            background-color: greenyellow;
+            min-height: 100vh;
+        }
+        /* 헤더영역 */
+        .all_page .header{
+            padding: 13px;
+            background-color:  white;
+            border-bottom: 1px solid black;
+            overflow: hidden;
+        }
+        .all_page .header .logo{
+            width: 128px;
+            float: left;
+        }
+        .all_page .header .header_menu{
+            float: right;
+            margin: 0px;
+            padding: 0px;
+        }
+        .all_page .header .header_menu .menu{
+            list-style: none;
+            display: inline-block;
+        }
+        .all_page .header .header_menu .menu:not(:last-child){
+            margin-right: 14px;
+        }
+        
+        /* 배너영역 */
+        .all_page .banner{
+            font-size: 13px;
+            padding: 10px;
+            text-align: center;
+            background-color: white;
+            border-bottom: 1px solid black;
+        }
+        /* 메뉴영역 */
+        .all_page .menu_category{
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            padding: 15px;
+            font-size: 12px;
+            background-color: white;
+            border-bottom: 1px solid black;
+        }
+        .all_page .menu_category .category{
+            margin: 0px;
+            padding: 0px;
+            float: left;
+        }
+        .all_page .menu_category .category .cate_list{
+            list-style: none;
+            display: inline-block;
+        }
+
+        .all_page .menu_category .category .cate_list:hover{
+            text-decoration: underline;
+        }
+
+
+        .all_page .menu_category .category .cate_list:not(:first-child){
+            margin-left: 20px;
+        }
+        /* 상품리스트 */
+        .wrap_item{
+            display: flex;
+            flex-wrap: wrap; 
+        }
+        .wrap_item .item{
+            width: 25%;
+            background-color: #f4f4f6;        
+            border: 1px solid #000;
+            border-left: none;
+            border-top: none;
+            box-sizing: border-box;
+
+            position: relative;
+        }
+        .wrap_item .item .item_info{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .wrap_item .item .item_info h2{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .wrap_item .item img{
+            width: 100%;
+            vertical-align: top;
+        }
+
+        .wrap_item .item:nth-child(4n){
+            border-right: none;
+        }
+
+
+        /* 하단아이템 정보 */
+        .wrap_item .item .swtch_info{
+            padding: 0 15px;
+            position: absolute;
+            bottom: 15px;
+            display: none;
+        }
+        .wrap_item .item:hover .swtch_info{
+            display: block;
+        }
+
+
+        .wrap_item .item .swtch_info .wrap_size{
+            display:flex;
+            flex-wrap: wrap;
+            
+        }
+        .wrap_item .item .swtch_info .wrap_size .size{
+            border: 1px solid #000;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            margin-top: 10px;
+            line-height: 40px;
+            text-align: center;
+
+        }
+        .wrap_item .item .swtch_info .wrap_color{
+            display: flex;
+            margin-top: 30px;
+            align-items: center;
+        }
+        .wrap_item .item .swtch_info .wrap_color .color{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid#000;
+            margin-right: 20px;
+        }
+        .black {
+            background-color: #000;
+        
+        }
+        .blue {
+            background-color: blue;
+        }
+        .pink {
+            background-color: pink;
+        }
+        
+        /* more */
+        .wrap_more{
+            display: flex;
+            height: 60px;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- 전체단락 -->
+    <div class="all_page">
+        <!-- 헤더영역 -->
+        <div class="header">
+            
+            <img class="logo" src="https://www.balenciaga.com/on/demandware.static/-/Sites/default/dw17de0943/images/logo/BAL/logo-small.svg" alt="balenciaga">
+            <ul class="header_menu">
+                <li class="menu">장바구니</li>
+                <li class="menu">검색</li>
+                <li class="menu">메뉴</li>
+            </ul>
+        </div>
+        <!-- 배너영역 -->
+        <div class="banner">
+            2021 Fall Winter NEW Arrival
+        </div>
+        <!-- 메뉴영역 -->
+        <div class="menu_category">
+            <ul class="category">
+                <li class="cate_list">
+                    <a href="https://www.balenciaga.com/ko-kr/%EB%82%A8%EC%84%B1-%EC%87%BC%ED%95%91/%EB%A0%88%EB%94%94-%ED%88%AC-%EC%9B%A8%EC%96%B4/%EB%AA%A8%EB%91%90-%EB%B3%B4%EA%B8%B0" target="_blank">
+                        코트
+                    </a>
+                </li>
+                <li class="cate_list">자켓</li>
+                <li class="cate_list">티셔츠</li>
+                <li class="cate_list">드레스</li>
+                <li class="cate_list">바지</li>
+                <li class="cate_list">스커트</li>
+                <li class="cate_list">가방</li>
+                <li class="cate_list">악세사리</li>
+            </ul>
+        </div>
+        <!-- 이미지목록 -->
+        <div class="wrap_item">
+            <div class="item">
+                
+                <div class="item_info">
+                    <h2>스니커즈</h2>
+                    <div> $1,595,300> </div>
+                </div>
+                
+                <img src="https://balenciaga.dam.kering.com/m/3c46ccfb9ccaab3/Thumbnail-663007TKP069501_F.jpg?v=1" alt="신발아이템1">
+                <div class="swtch_info">
+                    <div class="wrap_size">
+                        <div class=size>34</div>
+                        <div class=size>35</div>
+                        <div class=size>36</div>
+                        <div class=size>37</div>
+                        <div class=size>38</div>
+                        <div class=size>39</div>
+                        <div class=size>40</div>
+                        <div class=size>41</div>
+                        <div class=size>42</div>
+                    </div>
+                    <div class="wrap_color">
+                        <div class="black color"></div>
+                        <div class="pink color"></div>
+                        <div class="blue color"></div>
+                        <div> +3컬러</div>
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- <div class="item">
+                <div class="item_info">
+                    <h2>스니커즈</h2>
+                    <div> $1,595,300> </div>
+                </div>
+                <img src="https://balenciaga.dam.kering.com/m/3c46ccfb9ccaab3/Thumbnail-663007TKP069501_F.jpg?v=1" alt="신발아이템1">
+            </div>
+            <div class="item">
+                <div class="item_info">
+                    <h2>스니커즈</h2>
+                    <div> $1,595,300> </div>
+                </div>
+                <img src="https://balenciaga.dam.kering.com/m/3c46ccfb9ccaab3/Thumbnail-663007TKP069501_F.jpg?v=1" alt="신발아이템1">
+            </div>
+            <div class="item">
+                <div class="item_info">
+                    <h2>스니커즈</h2>
+                    <div> $1,595,300> </div>
+                </div>
+                <img src="https://balenciaga.dam.kering.com/m/3c46ccfb9ccaab3/Thumbnail-663007TKP069501_F.jpg?v=1" alt="신발아이템1">
+            </div>
+            <div class="item">
+                <div class="item_info">
+                    <h2>스니커즈</h2>
+                    <div> $1,595,300> </div>
+                </div>
+                <img src="https://balenciaga.dam.kering.com/m/3c46ccfb9ccaab3/Thumbnail-663007TKP069501_F.jpg?v=1" alt="신발아이템1">
+            </div>
+            <div class="item">
+                <div class="item_info">
+                    <h2>스니커즈</h2>
+                    <div> $1,595,300> </div>
+                </div>
+                <img src="https://balenciaga.dam.kering.com/m/3c46ccfb9ccaab3/Thumbnail-663007TKP069501_F.jpg?v=1" alt="신발아이템1">
+            </div>
+            <div class="item">
+                <div class="item_info">
+                    <h2>스니커즈</h2>
+                    <div> $1,595,300> </div>
+                </div>
+                <img src="https://balenciaga.dam.kering.com/m/3c46ccfb9ccaab3/Thumbnail-663007TKP069501_F.jpg?v=1" alt="신발아이템1">
+            </div> -->
+        </div>
+        <div class="wrap_more">
+            <div class="btn_more">더보기</div>
+        </div>
+    </div>
+</body>
+</html>
